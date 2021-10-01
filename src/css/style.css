@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+/* Primary Colors */
+--Very-dark-blue: hsl(233, 47%, 7%);
+--Dark-desaturated-blue: hsl(244, 38%, 16%);
+--Soft-violet: hsl(277, 64%, 61%);
+
+/* Neutral Colors */
+--White: hsl(0, 0%, 100%); /*(main heading, stats)*/
+--Slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /*(main paragraph)*/
+--Slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6); /*(stat headings)*/
+
+/*Fonts*/
+--Title-font: 'Inter', sans-serif;
+--Paragraph-font: 'Lexend Deca', sans-serif;
+
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main.card {
+    background-color: var(--Dark-desaturated-blue);
+    height: 445.40px;
+    margin-top: 10rem;
+    border-radius: 15px;
+    display: flex;
+}
+
+main.card .content {
+    padding: 4rem;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.card .content h1 {
+    font-family: var(--Title-font);
+    color: var(--White);
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    max-width: 370px;
+}
+
+main.card .content span {
+    color: var(--Soft-violet);
+}
+
+main.card .content p {
+    font-family: var(--Paragraph-font);
+    color: var(--Slightly-transparent-white);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5rem;
+    margin-bottom: 4.5rem;
+    max-width: 360px;
+}
+
+.container {
+    max-width: 360px;
+    display: flex;  
+    justify-content: space-between;
+}
+
+.container .items h2 {
+    font-family: var(--Title-font);
+    color: var(--Slightly-transparent-white-stat);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.container .items:last-child h2 {
+    text-transform: uppercase;
+}
+
+.items p {
+    font-family: var(--tt);
+    color: var(--Slightly-transparent-white);
+    font-weight: 400;
+    font-size: 5px;
+    text-transform: uppercase;
+    margin-top: .2rem;
+    letter-spacing: 1px;
+}
+
+.img-content img {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+footer {
+    background-color: var(--Dark-desaturated-blue);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .attribution {
+    text-align: center;
+    color: var(--Slightly-transparent-white);
+}
+
+footer .attribution a {
+    color: var(--Soft-violet);
+    text-decoration: none;
+}
+
+footer .attribution a:hover {
+    text-decoration: underline;
+}
+
