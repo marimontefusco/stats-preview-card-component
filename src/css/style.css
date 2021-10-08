@@ -11,6 +11,7 @@
 --Very-dark-blue: hsl(233, 47%, 7%);
 --Dark-desaturated-blue: hsl(244, 38%, 16%);
 --Soft-violet: hsl(277, 64%, 61%);
+--Soft-transparent-violet: hsla(277, 98%, 32%, 0.572);
 
 /* Neutral Colors */
 --White: hsl(0, 0%, 100%); /*(main heading, stats)*/
@@ -35,9 +36,9 @@ body {
 
 main.card {
     background-color: var(--Dark-desaturated-blue);
-    height: 445.40px;
+    height: 445.99px;
     margin-top: 10rem;
-    border-radius: 15px;
+    border-radius: 8px;
     display: flex;
 }
 
@@ -80,7 +81,7 @@ main.card .content p {
 
 .container .items h2 {
     font-family: var(--Title-font);
-    color: var(--Slightly-transparent-white-stat);
+    color: var(--White);
     font-weight: 700;
     font-size: 1.5rem;
 }
@@ -89,19 +90,35 @@ main.card .content p {
     text-transform: uppercase;
 }
 
-.items p {
-    font-family: var(--tt);
+.container .items p {
+    font-family: var(--Paragraph-font);
     color: var(--Slightly-transparent-white);
     font-weight: 400;
-    font-size: 5px;
+    font-size: .5rem;
     text-transform: uppercase;
     margin-top: .2rem;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 }
 
-.img-content img {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+.color-overlay img {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.color-overlay {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    position: relative;
+}
+
+.color-overlay::before {
+    content: "";
+    position: absolute;
+    width: 540px;
+    height: 445.99px; 
+    box-shadow: inset 0 0 0 230px var(--Soft-transparent-violet);
+    opacity: -20px;
+    z-index: 10;
 }
 
 footer {
