@@ -89,24 +89,22 @@ main.card .content p {
   text-transform: uppercase;
 }
 
-.container .items p {
+main.card .container .items p {
   font-family: var(--Paragraph-font);
   color: var(--Slightly-transparent-white);
   font-weight: 400;
-  font-size: 1.5rem; /*não consegui reduzri o tamanho da fonte conforme a img*/
+  font-size: 0.7rem;
   text-transform: uppercase;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
   letter-spacing: 1.2px;
 }
 
 .color-overlay img {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.color-overlay {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+.img .color-overlay {
   position: relative;
 }
 
@@ -116,8 +114,9 @@ main.card .content p {
   width: 540px;
   height: 445.99px;
   box-shadow: inset 0 0 0 230px var(--Soft-transparent-violet);
-  opacity: -20px;
   z-index: 10;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 footer {
@@ -144,14 +143,18 @@ footer .attribution a:hover {
 }
 
 @media screen and (max-width: 786px) {
+  body {
+    height: auto;
+  }
   main.card {
     max-width: 375px;
     height: 100%;
     flex-direction: column-reverse;
+    margin: 2rem 3rem;
   }
   main.card .content {
     padding: 2.5rem;
-    max-width: 375px;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,7 +163,7 @@ footer .attribution a:hover {
   main.card .content h1 {
     font-size: 1.8rem;
     max-width: 300px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     text-align: center;
   }
   main.card .content p {
@@ -168,29 +171,37 @@ footer .attribution a:hover {
     text-align: center;
     font-size: 16px;
     line-height: 1.7rem;
+    margin-bottom: 3rem;
   }
   .color-overlay img {
-    /*background-image: url("./src/img/image-header-mobile.jpg");*/
     max-width: 375px;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    height: 260px;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0;
   }
   .color-overlay::before {
     max-width: 375px;
     height: 260px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0;
   }
   .container {
-    background-color: brown;
-    max-width: 100px;
+    max-width: 200px;
     flex-direction: column;
     text-align: center;
   }
-  .items p {
-    color: blue;
+  main.card .container .items p {
+    font-size: .9rem;
     margin-top: 0.2rem;
-    margin-bottom: 2rem;
-    letter-spacing: 1.2px;
-    margin-bottom: 1rem; /*não está funcionando, sendo que pelo inspecionar funciona perfeitamente*/
+    margin-bottom: 1.8rem; 
+  }
+  main.card .container .items:last-child p {
+    margin-bottom: 0;
   }
 
   footer {
@@ -198,11 +209,3 @@ footer .attribution a:hover {
     height: 100px;
   }
 }
-
-/*
-background-color: var(--Dark-desaturated-blue);
-    height: 445.99px;
-    margin-top: 10rem;
-    border-radius: 8px;
-    display: flex;
-    */
