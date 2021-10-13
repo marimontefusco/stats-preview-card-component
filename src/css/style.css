@@ -150,7 +150,7 @@ footer .attribution a:hover {
     max-width: 375px;
     height: 100%;
     flex-direction: column-reverse;
-    margin: 2rem 3rem;
+    margin: 2rem;
   }
   main.card .content {
     padding: 2.5rem;
@@ -202,10 +202,5 @@ footer .attribution a:hover {
   }
   main.card .container .items:last-child p {
     margin-bottom: 0;
-  }
-
-  footer {
-    margin-top: 3rem; /*tb não está funcionando*/
-    height: 100px;
   }
 }
